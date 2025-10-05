@@ -5,9 +5,9 @@ const int NUM_BEACONS = 3;
 
 // Координаты маяков в метрах (x, y)
 float beacon_coords[NUM_BEACONS][2] = {
-  {4.3, -4.0},  // Координаты beacon_1
-  {6.3, 0.0},  // Координаты beacon_2
-  {0.0, 0.0}   // Координаты beacon_3
+  {0.9, 1.2},  // Координаты beacon_1
+  {0.0, 0.0},  // Координаты beacon_2
+  {1.8, 0.0}   // Координаты beacon_3
 };
 
 // Калибровочные параметры для формулы RSSI -> расстояние
@@ -60,7 +60,6 @@ void loop() {
 
 // Функция для преобразования RSSI в расстояние
 float calculateDistance(int rssi) {
-  d = 10^((A - RSSI) / (10 * n))
   return pow(10.0, (A - rssi) / (10.0 * n));
 }
 
